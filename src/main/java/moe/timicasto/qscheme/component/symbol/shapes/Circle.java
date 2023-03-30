@@ -30,6 +30,12 @@ public class Circle implements IShape {
 
 	@Override
 	public String getStringDef() {
-		return null;
+		return "(circle " +
+				"(center " + center.getX() + " " + center.getY() + ") " +
+				"(radius " + radius + ") " +
+				"\n" +
+				"(stroke " + "(width " + stroke.width + ") " + "(type " + stroke.style.toString().toLowerCase() + "))\n" +
+				"(fill (type " + filling.toString().toLowerCase() + ")" + color.map(value -> "(color " + value.getRed() + " " + value.getGreen() + " " + value.getBlue() + " " + "1)").orElse("") + ")" +
+				"\n)";
 	}
 }

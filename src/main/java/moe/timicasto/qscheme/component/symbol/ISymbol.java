@@ -1,5 +1,7 @@
 package moe.timicasto.qscheme.component.symbol;
 
+import moe.timicasto.qscheme.component.symbol.shapes.IShape;
+
 import java.util.List;
 
 public interface ISymbol {
@@ -7,6 +9,7 @@ public interface ISymbol {
 	boolean isNumberHided();
 	String getReference();
 	String getValue();
-	void setValue();
-	
+	void setValue(String val);
+	List<IShape> getShapes();
+	String getStringDef();
 }

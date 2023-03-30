@@ -29,6 +29,16 @@ public class Polyline implements IShape {
 
 	@Override
 	public String getStringDef() {
-		return null;
+		String points = "(pts ";
+		for (Vec2d point : this.points) {
+			points += "(xy " + point.x + " " + point.y + ")";
+		}
+		points += ")";
+		return "(polyline " + "\n" +
+				points +
+				"\n" +
+				"(stroke " + "(width " + stroke.width + ") " + "(type " + stroke.style.toString().toLowerCase() + "))\n" +
+				"(fill (type " + filling.toString().toLowerCase() + ")" + fillingColor.map(value -> "(color " + value.getRed() + " " + value.getGreen() + " " + value.getBlue() + " " + "1)").orElse("") + ")" +
+				"\n)";
 	}
 }

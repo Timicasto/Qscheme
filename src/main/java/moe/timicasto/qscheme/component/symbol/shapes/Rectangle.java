@@ -30,6 +30,12 @@ public class Rectangle implements IShape {
 
 	@Override
 	public String getStringDef() {
-		return null;
+		return "(rectangle " +
+				"(start " + start.getX() + " " + start.getY() + ") " +
+				"(end " + end.getX() + " " + end.getY() + ") " +
+				"\n" +
+				"(stroke " + "(width " + stroke.width + ") " + "(type " + stroke.style.toString().toLowerCase() + "))\n" +
+				"(fill (type " + filling.toString().toLowerCase() + ")" + fillingColor.map(value -> "(color " + value.getRed() + " " + value.getGreen() + " " + value.getBlue() + " " + "1)").orElse("") + ")" +
+				"\n)";
 	}
 }
