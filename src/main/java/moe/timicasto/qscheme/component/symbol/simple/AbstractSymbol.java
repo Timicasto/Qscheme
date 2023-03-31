@@ -5,6 +5,7 @@ import moe.timicasto.qscheme.component.symbol.ISymbol;
 import moe.timicasto.qscheme.component.symbol.LocatedPin;
 import moe.timicasto.qscheme.component.symbol.shapes.IShape;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractSymbol implements ISymbol {
@@ -14,9 +15,10 @@ public abstract class AbstractSymbol implements ISymbol {
 	
 	public AbstractSymbol(String value, Pin... pins) {
 		int i = 0;
+		this.pins = new ArrayList<>();
 		this.value = value;
 		for (Pin pin : pins) {
-			this.pins.add(new LocatedPin(pin, 0, i * 2.54, 2.54));
+			this.pins.add(new LocatedPin(pin, 0, i * 2.54, 2.54, 0));
 			++i;
 		}
 	}

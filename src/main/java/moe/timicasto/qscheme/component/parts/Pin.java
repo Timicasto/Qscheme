@@ -8,4 +8,12 @@ public class Pin {
 		this.pinName = name;
 		this.pinNumber = number;
 	}
+
+	public String getPinName() {
+		return pinName;
+	}
+
+	public String getPinNumber() {
+		return pinNumber;
+	}
 }

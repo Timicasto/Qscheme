@@ -7,12 +7,14 @@ public class LocatedPin {
 	public double x;
 	public double y;
 	public double length;
+	public int rotation;
 
-	public LocatedPin(Pin meta, double x, double y, double length) {
+	public LocatedPin(Pin meta, double x, double y, double length, int rotation) {
 		this.pinMeta = meta;
 		this.x = x;
 		this.y = y;
 		this.length = length;
+		this.rotation = rotation;
 	}
 
 	public Pin getPinMeta() {
@@ -29,5 +31,9 @@ public class LocatedPin {
 
 	public double getLength() {
 		return length;
+	}
+
+	public int getRotation() {
+		return rotation;
 	}
 }

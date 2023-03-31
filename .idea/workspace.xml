@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AbstractSymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment=".gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/Capacitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/Default.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/ISymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/ISymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/parts/Pin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/parts/Pin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/LocatedPin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/LocatedPin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AbstractSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AbstractSymbol.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -40,6 +34,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Qscheme" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Qscheme" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Qscheme" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -60,9 +65,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -72,18 +74,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/usr/share/kicad-nightly/symbols/Device.kicad_sym",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="moe.timicasto.qscheme.component" />
@@ -122,6 +123,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Qscheme [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -143,6 +145,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -162,6 +165,44 @@
       <option name="presentableId" value="Default" />
       <updated>1680183828138</updated>
     </task>
+    <task id="LOCAL-00001" summary=".gitignore">
+      <created>1680192733041</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680192733041</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.NullPointerException" memberName="cause" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
