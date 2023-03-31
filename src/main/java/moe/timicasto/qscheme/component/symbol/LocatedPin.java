@@ -1,6 +1,10 @@
 package moe.timicasto.qscheme.component.symbol;
 
 import moe.timicasto.qscheme.component.parts.Pin;
+import moe.timicasto.qscheme.net.Net;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LocatedPin {
 	public Pin pinMeta;
@@ -8,6 +12,7 @@ public class LocatedPin {
 	public double y;
 	public double length;
 	public int rotation;
+	public List<Net> nets = new ArrayList<>();
 
 	public LocatedPin(Pin meta, double x, double y, double length, int rotation) {
 		this.pinMeta = meta;
