@@ -18,12 +18,32 @@ public class Eschematic {
 		this.uuid = UUID.randomUUID();
 	}
 	
-	void addNet(Net net) {
+	public void addNet(Net net) {
 		nets.add(net);
 	}
 	
-	void add(Component component) {
+	public void add(Component component) {
 		components.add(component);
+	}
+
+	public String compile() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("(kicad_sch \n");
+
+		sb.append("  (version 20230221) (generator qcheme)\n");
+
+		sb.append("  (uuid ").append(this.uuid.toString()).append(")\n");
+
+		sb.append("  (paper \"A3\")\n");
+
+		sb.append("(lib_symbols\n");
+
+		sb.append(")");
+
+		sb.append(")");
+
+		return sb.toString();
 	}
 	
 }

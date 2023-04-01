@@ -12,6 +12,7 @@ public class Main {
 		Circle circle = new Circle(new Vec2d(0, 0), 2.54, new Stroke(StrokeStyle.SOLID, 0), FillingType.BACKGROUND)
 ;
 		Capacitor capacitor = new Capacitor("68uF");
-		System.out.println(capacitor.getStringDef());
+		Eschematic eschematic = new Eschematic(new SchematicMeta("TestTitle", "A", "Timicasto", "2023-04-01"));
+		System.out.println(eschematic.compile());
 	}
 }
