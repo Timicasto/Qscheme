@@ -1,18 +1,30 @@
 package moe.timicasto.qscheme;
 
+import moe.timicasto.qscheme.component.Component;
 import moe.timicasto.qscheme.component.symbol.shapes.*;
-import moe.timicasto.qscheme.component.symbol.simple.Capacitor;
+import moe.timicasto.qscheme.component.symbol.simple.CapacitorSymbol;
 import moe.timicasto.qscheme.utils.Vec2d;
 
-import java.awt.geom.Dimension2D;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
-	public static void main(String[] args) {
-		Arc arc = new Arc(new Vec2d(2.54, -1.524), new Vec2d(2.9621, 0), new Vec2d(2.54, 1.524), new Stroke(StrokeStyle.SOLID, 0), FillingType.BACKGROUND);
-		Circle circle = new Circle(new Vec2d(0, 0), 2.54, new Stroke(StrokeStyle.SOLID, 0), FillingType.BACKGROUND)
-;
-		Capacitor capacitor = new Capacitor("68uF");
+	public static void main(String[] args) throws IOException {
+		CapacitorSymbol capacitor = new CapacitorSymbol("68uF");
+		CapacitorSymbol capacitorSymbol = new CapacitorSymbol("100uF");
+		CapacitorSymbol c = new CapacitorSymbol("100nF");
 		Eschematic eschematic = new Eschematic(new SchematicMeta("TestTitle", "A", "Timicasto", "2023-04-01"));
-		System.out.println(eschematic.compile());
+		eschematic.add(new Component(capacitor));
+		eschematic.add(new Component(capacitorSymbol));
+		for (int i = 0; i < 1800; i++) {
+			eschematic.add(new Component(c));
+		}
+		//System.out.println(eschematic.compile());
+
+		BufferedWriter writer = new BufferedWriter(new FileWriter("./test.kicad_sch"));
+		writer.write(eschematic.compile());
+		writer.close();
 	}
 }

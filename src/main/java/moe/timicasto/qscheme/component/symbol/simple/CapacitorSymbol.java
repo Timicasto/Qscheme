@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Capacitor extends AbstractSymbol {
+public class CapacitorSymbol extends AbstractSymbol {
 	String val;
 	public static final IShape[] shapes =  {new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3302), FillingType.NONE, new Vec2d(-1.524, -0.508), new Vec2d(1.524, -0.508)), new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3048), FillingType.NONE, new Vec2d(-1.524, 0.508), new Vec2d(1.524, 0.508))};
 
-	public Capacitor(String value) {
+	public CapacitorSymbol(String value) {
 		super(value, new Pin("~", "1"), new Pin("~", "2"));
 		this.val = value;
 	}
@@ -49,10 +49,19 @@ public class Capacitor extends AbstractSymbol {
 
 	@Override
 	public String getStringDef() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("(symbol \"").append(getReference()).append("\"").append(isNumberHided() ? "(pin_number hide)" : "").append("(pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)\n");
+		StringBuilder pinBuilder = new StringBuilder();
+		for (LocatedPin pin : getPins()) {
+			pinBuilder.append(String.format("(pin passive line (at %f %f %d) (length %f) (name \"%s\" (effects (font (size 1.27 1.27))))(number \"%s\" (effects (font (size 1.27 1.27)))) )", pin.x, pin.y, pin.rotation, pin.length, pin.getPinMeta().getPinName(), pin.getPinMeta().getPinNumber()));
+			pinBuilder.append("\n");
+		}
+		String pindefs = pinBuilder.toString();
 
-		sb.append(this.getShapes().get(0).getStringDef()).append("\n").append(this.getShapes().get(1).getStringDef());
+		StringBuilder sb = new StringBuilder();
+		String str = super.getStringDef();
+		str = str.replaceFirst("\\[ATTACHATTRIBS]", "(pin_numbers hide) (pin_names (offset 0.254) hide)");
+		str = str.replaceFirst("\\{PINSDEFS}", pindefs);
+		sb.append(str);
+		sb.append("\n");
 		return sb.toString();
 	}
 

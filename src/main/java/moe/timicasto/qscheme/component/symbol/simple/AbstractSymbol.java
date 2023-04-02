@@ -53,7 +53,37 @@ public abstract class AbstractSymbol implements ISymbol {
 	
 	@Override
 	public String getStringDef() {
+		StringBuilder builder = new StringBuilder();
+
+		builder.append("(symbol ");
+		builder.append("\"").append("[LIBID]").append("\" [ATTACHATTRIBS]").append(" (in_bom yes) (on_board yes)\n");
+
+		builder.append("  (property \"Reference\"" + " \"").append("[REFERENCE]").append("\" ").append("(at 0 1.27 0)\n");
+		builder.append("    (effects (font (size 1.27 1.27)))\n  )\n");
+
+		builder.append("  (property \"Value\"" + " \"").append("[VALUE]").append("\" ").append("(at 0 1.27 0)\n");
+		builder.append("    (effects (font (size 1.27 1.27)))\n  )\n");
+
+		builder.append("  (property \"Footprint\"" + " \"").append("[FOOTPRINT]").append("\" ").append("(at 0 1.27 0)\n");
+		builder.append("    (effects (font (size 1.27 1.27)) hide)\n  )\n");
+
+		builder.append("  (property \"Datasheet\"" + " \"").append("[DATASHEET]").append("\" ").append("(at 0 1.27 0)\n");
+		builder.append("    (effects (font (size 1.27 1.27)) hide)\n  )\n");
+
+		builder.append("  (symbol \"").append("[LIBSUBID]").append("_1_1\"\n");
+
+		for (IShape shape : getShapes()) {
+			builder.append(shape.getStringDef());
+			builder.append("\n");
+		}
+
+
+		builder.append("{PINSDEFS}");
+
+		builder.append("  )\n");
+
+		builder.append(')');
 		// TODO: Generate Symbol String
-		return null;
+		return builder.toString();
 	}
 }

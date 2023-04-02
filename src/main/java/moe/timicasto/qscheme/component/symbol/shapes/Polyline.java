@@ -41,4 +41,20 @@ public class Polyline implements IShape {
 				"(fill (type " + filling.toString().toLowerCase() + ")" + fillingColor.map(value -> "(color " + value.getRed() + " " + value.getGreen() + " " + value.getBlue() + " " + "1)").orElse("") + ")" +
 				"\n)";
 	}
+
+	public List<Vec2d> getPoints() {
+		return points;
+	}
+
+	public Stroke getStroke() {
+		return stroke;
+	}
+
+	public FillingType getFilling() {
+		return filling;
+	}
+
+	public Optional<Color> getFillingColor() {
+		return fillingColor;
+	}
 }
