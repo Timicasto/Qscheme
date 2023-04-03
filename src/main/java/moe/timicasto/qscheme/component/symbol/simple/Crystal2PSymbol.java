@@ -9,23 +9,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CapacitorSymbol extends AbstractSymbol {
+public class Crystal2PSymbol extends AbstractSymbol {
 	String val;
 	public static final IShape[] shapes =  {
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3302), FillingType.NONE, new Vec2d(-1.524, -0.508), new Vec2d(1.524, -0.508)),
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3048), FillingType.NONE, new Vec2d(-1.524, 0.508), new Vec2d(1.524, 0.508))
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.381), FillingType.NONE, new Vec2d(-1.27, -0.762), new Vec2d(-1.27, -0.762)),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.381), FillingType.NONE, new Vec2d(1.27, -0.762), new Vec2d(1.27, -0.762)),
+			new Rectangle(new Vec2d(-0.762, -1.524), new Vec2d(0.762, 1.524), new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE)
 	};
 
-	public CapacitorSymbol(String value) {
-		super(value, new Pin("~", "1"), new Pin("~", "2"));
+	public Crystal2PSymbol(String value) {
+		super(value, new Pin("1", "1"), new Pin("2", "2"));
 		this.val = value;
 	}
 
 	@Override
 	public List<LocatedPin> getPins() {
 		List<LocatedPin> ret = new ArrayList<>();
-		ret.add(new LocatedPin(new Pin("~", "1"), 0, 2.54, 2.032, 270));
-		ret.add(new LocatedPin(new Pin("~", "2"), 0, -2.54, 2.032, 90));
+		ret.add(new LocatedPin(new Pin("1", "1"), -2.54, 0, 1.27, 0));
+		ret.add(new LocatedPin(new Pin("2", "2"), 2.54, 0, 1.27, 180));
 		return ret;
 	}
 
@@ -70,6 +71,6 @@ public class CapacitorSymbol extends AbstractSymbol {
 
 	@Override
 	public String getReference() {
-		return "C";
+		return "Y";
 	}
 }

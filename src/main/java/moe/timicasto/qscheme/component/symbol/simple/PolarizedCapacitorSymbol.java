@@ -9,14 +9,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CapacitorSymbol extends AbstractSymbol {
+public class PolarizedCapacitorSymbol extends AbstractSymbol {
 	String val;
 	public static final IShape[] shapes =  {
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3302), FillingType.NONE, new Vec2d(-1.524, -0.508), new Vec2d(1.524, -0.508)),
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3048), FillingType.NONE, new Vec2d(-1.524, 0.508), new Vec2d(1.524, 0.508))
+			new Rectangle(new Vec2d(-1.524, -0.3048), new Vec2d(1.524, -0.6858), new Stroke(StrokeStyle.DEFAULT, 0), FillingType.OUTLINE),
+			new Rectangle(new Vec2d(-1.524, 0.6858), new Vec2d(1.524, 0.3048), new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE, new Vec2d(1.27, 1.524), new Vec2d(-0.762, 1.524)),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE, new Vec2d(-1.016, 1.27), new Vec2d(-1.016, 1.778))
 	};
 
-	public CapacitorSymbol(String value) {
+	public PolarizedCapacitorSymbol(String value) {
 		super(value, new Pin("~", "1"), new Pin("~", "2"));
 		this.val = value;
 	}
@@ -24,8 +26,8 @@ public class CapacitorSymbol extends AbstractSymbol {
 	@Override
 	public List<LocatedPin> getPins() {
 		List<LocatedPin> ret = new ArrayList<>();
-		ret.add(new LocatedPin(new Pin("~", "1"), 0, 2.54, 2.032, 270));
-		ret.add(new LocatedPin(new Pin("~", "2"), 0, -2.54, 2.032, 90));
+		ret.add(new LocatedPin(new Pin("~", "1"), 0, 2.54, 1.8542, 270));
+		ret.add(new LocatedPin(new Pin("~", "2"), 0, -2.54, 1.8542, 90));
 		return ret;
 	}
 

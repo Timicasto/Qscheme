@@ -9,23 +9,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CapacitorSymbol extends AbstractSymbol {
+public class Crystal4PSymbol extends AbstractSymbol {
 	String val;
 	public static final IShape[] shapes =  {
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3302), FillingType.NONE, new Vec2d(-1.524, -0.508), new Vec2d(1.524, -0.508)),
-			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.3048), FillingType.NONE, new Vec2d(-1.524, 0.508), new Vec2d(1.524, 0.508))
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.381), FillingType.NONE, new Vec2d(-1.27, -0.762), new Vec2d(-1.27, -0.762)),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.381), FillingType.NONE, new Vec2d(1.27, -0.762), new Vec2d(1.27, -0.762)),
+			new Rectangle(new Vec2d(-0.762, -1.524), new Vec2d(0.762, 1.524), new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE, new Vec2d(-1.27, 1.27), new Vec2d(-1.27, 1.905), new Vec2d(1.27, 1.905), new Vec2d(1.27, 1.27)),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0), FillingType.NONE, new Vec2d(-1.27, -1.27), new Vec2d(-1.27, -1.905), new Vec2d(1.27, -1.905), new Vec2d(1.27, -1.27))
 	};
 
-	public CapacitorSymbol(String value) {
-		super(value, new Pin("~", "1"), new Pin("~", "2"));
+	public Crystal4PSymbol(String value) {
+		super(value, new Pin("1", "1"), new Pin("2", "2"), new Pin("3", "3"), new Pin("4", "4"));
 		this.val = value;
 	}
 
 	@Override
 	public List<LocatedPin> getPins() {
 		List<LocatedPin> ret = new ArrayList<>();
-		ret.add(new LocatedPin(new Pin("~", "1"), 0, 2.54, 2.032, 270));
-		ret.add(new LocatedPin(new Pin("~", "2"), 0, -2.54, 2.032, 90));
+		ret.add(new LocatedPin(new Pin("1", "1"), -2.54, 0, 1.27, 0));
+		ret.add(new LocatedPin(new Pin("2", "2"), 0, -2.54, 0.635, 90));
+		ret.add(new LocatedPin(new Pin("3", "3"), 2.54, 0, 1.27, 180));
+		ret.add(new LocatedPin(new Pin("4", "4"), 0, 2.54, 0.635, 270));
 		return ret;
 	}
 
@@ -61,7 +66,7 @@ public class CapacitorSymbol extends AbstractSymbol {
 
 		StringBuilder sb = new StringBuilder();
 		String str = super.getStringDef();
-		str = str.replaceFirst("\\[ATTACHATTRIBS]", "(pin_numbers hide) (pin_names (offset 0.254) hide)");
+		str = str.replaceFirst("\\[ATTACHATTRIBS]", "(pin_names (offset 1.016) hide)");
 		str = str.replaceFirst("\\{PINSDEFS}", pindefs);
 		sb.append(str);
 		sb.append("\n");
@@ -70,6 +75,6 @@ public class CapacitorSymbol extends AbstractSymbol {
 
 	@Override
 	public String getReference() {
-		return "C";
+		return "Y";
 	}
 }

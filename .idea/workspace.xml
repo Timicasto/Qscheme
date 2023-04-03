@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment="code cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AntennaSymbol.java" afterDir="false" />
+    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment="grid alignment and symbol of R &amp; AE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/Crystal2PSymbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/Crystal4PSymbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/PolarizedCapacitorSymbol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/ResistorSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/ResistorSymbol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/CapacitorSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/CapacitorSymbol.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680530309680</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="grid alignment and symbol of R &amp; AE">
+      <created>1680535028803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680535028803</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +238,8 @@
     <MESSAGE value="schematic meta" />
     <MESSAGE value="autoplacing" />
     <MESSAGE value="code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
+    <MESSAGE value="grid alignment and symbol of R &amp; AE" />
+    <option name="LAST_COMMIT_MESSAGE" value="grid alignment and symbol of R &amp; AE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,8 +250,23 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="8" />
+          <line>146</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
