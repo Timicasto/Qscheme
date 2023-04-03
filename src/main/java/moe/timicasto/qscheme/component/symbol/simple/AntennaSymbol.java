@@ -9,22 +9,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ResistorSymbol extends AbstractSymbol {
+public class AntennaSymbol extends AbstractSymbol {
 	String val;
-	public static final IShape[] shapes = {
-			new Rectangle(new Vec2d(-0.762, 1.778), new Vec2d(0.762, -1.778), new Stroke(StrokeStyle.DEFAULT, 0.2032), FillingType.NONE)
+	public static final IShape[] shapes =  {
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.254), FillingType.NONE, new Vec2d(0, 2.54), new Vec2d(0, -3.81)),
+			new Polyline(new Stroke(StrokeStyle.DEFAULT, 0.254), FillingType.NONE, new Vec2d(1.27, 2.54), new Vec2d(0, -2.54), new Vec2d(-1.27, 2.54))
 	};
 
-	public ResistorSymbol(String value) {
-		super(value, new Pin("~", "1"), new Pin("~", "2"));
+	public AntennaSymbol(String value) {
+		super(value, new Pin("A", "1"));
 		this.val = value;
 	}
 
 	@Override
 	public List<LocatedPin> getPins() {
 		List<LocatedPin> ret = new ArrayList<>();
-		ret.add(new LocatedPin(new Pin("~", "1"), 0, 2.54, 0.762, 270));
-		ret.add(new LocatedPin(new Pin("~", "2"), 0, -2.54, 0.762, 90));
+		ret.add(new LocatedPin(new Pin("A", "1"), 0, -5.08, 2.54, 90));
 		return ret;
 	}
 
@@ -69,6 +69,6 @@ public class ResistorSymbol extends AbstractSymbol {
 
 	@Override
 	public String getReference() {
-		return "R";
+		return "AE";
 	}
 }

@@ -1,6 +1,5 @@
 package moe.timicasto.qscheme.component;
 
-import moe.timicasto.qscheme.component.parts.Pin;
 import moe.timicasto.qscheme.component.symbol.ISymbol;
 import moe.timicasto.qscheme.component.symbol.LocatedPin;
 

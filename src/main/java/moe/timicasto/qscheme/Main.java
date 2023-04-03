@@ -1,12 +1,11 @@
 package moe.timicasto.qscheme;
 
 import moe.timicasto.qscheme.component.Component;
-import moe.timicasto.qscheme.component.symbol.shapes.*;
+import moe.timicasto.qscheme.component.symbol.simple.AntennaSymbol;
 import moe.timicasto.qscheme.component.symbol.simple.CapacitorSymbol;
-import moe.timicasto.qscheme.utils.Vec2d;
+import moe.timicasto.qscheme.component.symbol.simple.ResistorSymbol;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -15,11 +14,13 @@ public class Main {
 		CapacitorSymbol capacitor = new CapacitorSymbol("68uF");
 		CapacitorSymbol capacitorSymbol = new CapacitorSymbol("100uF");
 		CapacitorSymbol c = new CapacitorSymbol("100nF");
+		ResistorSymbol r = new ResistorSymbol("5.1K");
+		AntennaSymbol an = new AntennaSymbol("ANT3216LL00R2400A");
 		Eschematic eschematic = new Eschematic(new SchematicMeta("TestTitle", "A", "Timicasto", "2023-04-01"));
 		eschematic.add(new Component(capacitor));
 		eschematic.add(new Component(capacitorSymbol));
 		for (int i = 0; i < 1800; i++) {
-			eschematic.add(new Component(c));
+			eschematic.add(new Component(an));
 		}
 		//System.out.println(eschematic.compile());
 

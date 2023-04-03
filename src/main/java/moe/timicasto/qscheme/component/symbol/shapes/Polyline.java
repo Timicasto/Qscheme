@@ -29,11 +29,11 @@ public class Polyline implements IShape {
 
 	@Override
 	public String getStringDef() {
-		String points = "(pts ";
+		StringBuilder points = new StringBuilder("(pts ");
 		for (Vec2d point : this.points) {
-			points += "(xy " + point.x + " " + point.y + ")";
+			points.append("(xy ").append(point.x).append(" ").append(point.y).append(")");
 		}
-		points += ")";
+		points.append(")");
 		return "(polyline " + "\n" +
 				points +
 				"\n" +

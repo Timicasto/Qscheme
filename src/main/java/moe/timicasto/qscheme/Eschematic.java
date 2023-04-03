@@ -19,9 +19,10 @@ public class Eschematic {
 	public final SchematicMeta meta;
 	public final UUID uuid;
 
-	private float drawX = 14.0F;
-	private float drawY = 14.0F;
+	private int x = 24;
+	private int y = 24;
 	private long ref = 1L;
+	private double grid = 0.635D;
 	
 	public Eschematic(SchematicMeta meta) {
 		this.meta = meta;
@@ -63,8 +64,6 @@ public class Eschematic {
 		sb.append(")");
 
 		for (Component component : components) {
-
-			float minX, minY;
 
 			List<Float> startXs = new ArrayList<>();
 			List<Float> startYs = new ArrayList<>();
@@ -126,8 +125,8 @@ public class Eschematic {
 			float stopX = Collections.max(stopXs);
 			float stopY = Collections.max(stopYs);
 
-			drawX += Math.abs(startX);
-			drawY += Math.abs(startY);
+			x += Math.ceil(Math.abs(startX) / grid);
+			y += Math.ceil(Math.abs(startY) / grid);
 
 			StringBuilder pindefs = new StringBuilder();
 			for (LocatedPin pin : component.symbol.getPins()) {
@@ -145,17 +144,17 @@ public class Eschematic {
 					"{PINDEFS}" +
 					"(instances (project \"%s\" (path \"/%s\" (reference \"%s\") (unit 1)))\n" +
 					")\n" +
-					")", LIBID_PREFIX + component.getSymbol().getReference() + "_" + component.hashCode(), drawX, drawY, 0, UUID.randomUUID(), component.getSymbol().getReference(), ref, drawX, drawY + 1.2F, 0f, component.getSymbol().getValue(), drawX, drawY - 1.2F, 0f, "", drawX, drawY, 0f, this.meta.title, this.uuid, component.getSymbol().getReference());
+					")", LIBID_PREFIX + component.getSymbol().getReference() + "_" + component.hashCode(), x * grid, y * grid, 0, UUID.randomUUID(), component.getSymbol().getReference(), ref, x * grid, y * grid + 1.2F, 0f, component.getSymbol().getValue(), x * grid, y * grid - 1.2F, 0f, "", x * grid, y * grid, 0f, this.meta.title, this.uuid, component.getSymbol().getReference());
 			def = def.replaceAll("\\{PINDEFS}", pindefs.toString());
 			++ref;
 
-			drawX += stopX + 2.54;
-			drawY -= Math.abs(startY);
+			x += Math.ceil(stopX / grid) + 4;
+			y -= Math.ceil(Math.abs(startY) / grid);
 			tmpY = Math.max(Math.abs(startY) + Math.abs(stopY), tmpY);
-			if (drawX >= 400) {
-				drawY += tmpY;
+			if (x >= 640) {
+				y += Math.ceil(tmpY / grid);
 				tmpY = 0;
-				drawX = 14.0F;
+				x = 24;
 			}
 
 			sb.append(def);
