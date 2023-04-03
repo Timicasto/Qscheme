@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Component {
-	public Map<String, LocatedPin> numberMap = new HashMap<>();
-	public ISymbol symbol;
+	public final Map<String, LocatedPin> numberMap = new HashMap<>();
+	public final ISymbol symbol;
 
 	public Component(ISymbol symbol) {
 		for (LocatedPin pin : symbol.getPins()) {

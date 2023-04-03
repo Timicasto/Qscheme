@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractSymbol implements ISymbol {
-	List<LocatedPin> pins;
+	final List<LocatedPin> pins;
 	List<IShape> shapes;
 	String value;
 	

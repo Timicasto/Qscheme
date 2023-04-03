@@ -6,13 +6,13 @@ import java.awt.*;
 import java.util.Optional;
 
 public class Arc implements IShape {
-	public Vec2d start;
-	public Vec2d mid;
-	public Vec2d end;
+	public final Vec2d start;
+	public final Vec2d mid;
+	public final Vec2d end;
 
-	Stroke stroke;
-	FillingType filling;
-	Optional<Color> color;
+	final Stroke stroke;
+	final FillingType filling;
+	final Optional<Color> color;
 
 	public Arc(Vec2d start, Vec2d mid, Vec2d end, Stroke stroke, FillingType filling) {
 		this.start = start;

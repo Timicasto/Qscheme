@@ -14,10 +14,10 @@ import java.util.UUID;
 public class Eschematic {
 
 	public static final String LIBID_PREFIX = "ProjectLib:";
-	public List<Net> nets = new ArrayList<>();
-	public List<Component> components = new ArrayList<>();
-	public SchematicMeta meta;
-	public UUID uuid;
+	public final List<Net> nets = new ArrayList<>();
+	public final List<Component> components = new ArrayList<>();
+	public final SchematicMeta meta;
+	public final UUID uuid;
 
 	private float drawX = 14.0F;
 	private float drawY = 14.0F;

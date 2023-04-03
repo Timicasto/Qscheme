@@ -6,11 +6,11 @@ import java.awt.*;
 import java.util.Optional;
 
 public class Circle implements IShape {
-	public Vec2d center;
-	public double radius;
-	Stroke stroke;
-	FillingType filling;
-	Optional<Color> color;
+	public final Vec2d center;
+	public final double radius;
+	final Stroke stroke;
+	final FillingType filling;
+	final Optional<Color> color;
 
 	public Circle(Vec2d center, double radius, Stroke stroke, FillingType filling) {
 		this.center = center;

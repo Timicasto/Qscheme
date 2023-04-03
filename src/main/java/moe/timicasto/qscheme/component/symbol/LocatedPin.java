@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LocatedPin {
-	public Pin pinMeta;
-	public double x;
-	public double y;
-	public double length;
-	public int rotation;
-	public List<Net> nets = new ArrayList<>();
+	public final Pin pinMeta;
+	public final double x;
+	public final double y;
+	public final double length;
+	public final int rotation;
+	public final List<Net> nets = new ArrayList<>();
 
 	public LocatedPin(Pin meta, double x, double y, double length, int rotation) {
 		this.pinMeta = meta;

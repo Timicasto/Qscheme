@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment="schematic meta">
+    <list default="true" id="fe590f97-4adc-4449-9449-9a9640ff16d0" name="Changes" comment="autoplacing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/ResistorSymbol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Eschematic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/shapes/Polyline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AbstractSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/AbstractSymbol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/Capacitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moe/timicasto/qscheme/component/symbol/simple/CapacitorSymbol.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680364524706</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="autoplacing">
+      <created>1680450267983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680450267983</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,7 +208,8 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="Capacitor one half" />
     <MESSAGE value="schematic meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="schematic meta" />
+    <MESSAGE value="autoplacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="autoplacing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

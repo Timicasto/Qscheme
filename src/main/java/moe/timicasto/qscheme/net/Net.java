@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Net {
-	public String name;
-	public List<LocatedPin> connects;
+	public final String name;
+	public final List<LocatedPin> connects;
 	
 	public Net(String name) {
 		this.name = name;

@@ -6,11 +6,11 @@ import java.awt.*;
 import java.util.Optional;
 
 public class Rectangle implements IShape {
-	public Vec2d start;
-	public Vec2d end;
-	Stroke stroke;
-	FillingType filling;
-	Optional<Color> fillingColor;
+	public final Vec2d start;
+	public final Vec2d end;
+	final Stroke stroke;
+	final FillingType filling;
+	final Optional<Color> fillingColor;
 
 	public Rectangle(Vec2d start, Vec2d end, Stroke stroke, FillingType filling, Color fillingColor) {
 		this.start = start;

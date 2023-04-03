@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Optional;
 
 public class Polyline implements IShape {
-	List<Vec2d> points;
-	Stroke stroke;
-	FillingType filling;
-	Optional<Color> fillingColor;
+	final List<Vec2d> points;
+	final Stroke stroke;
+	final FillingType filling;
+	final Optional<Color> fillingColor;
 
 	public Polyline(Stroke stroke, FillingType filling, Vec2d... points) {
 		this.stroke = stroke;
